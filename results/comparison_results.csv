@@ -1,0 +1,4 @@
+Experiment,mAP@0.5,mAP@0.5:0.95,Precision,Recall
+no_aug,0.9058,0.7005,0.9466,0.8675
+basic_aug,0.922,0.6741,0.9758,0.9067
+strong_aug,0.9003,0.6031,0.9543,0.8676

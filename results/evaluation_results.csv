@@ -1,0 +1,11 @@
+video,actual,predicted,correct
+swing1.mp4,Swing,Swing,True
+swing2.mp4,Swing,Swing,True
+swing3.mp4,Swing,Swing,True
+swing4.mp4,Swing,Swing,True
+swing5.mp4,Swing,Swing,True
+no_swing1.mp4,No Swing,Swing,False
+no_swing2.mp4,No Swing,No Swing,True
+no_swing3.mp4,No Swing,No Swing,True
+no_swing4.mp4,No Swing,No Swing,True
+no_swing5.mp4,No Swing,No Swing,True

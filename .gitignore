@@ -1,0 +1,17 @@
+.env
+
+# 데이터셋
+dataset_*/
+test_videos/
+
+# 학습 결과
+runs/
+training_results/
+
+# 영상 파일
+*.mp4
+
+# Python
+__pycache__/
+venv/
+*.pyc
