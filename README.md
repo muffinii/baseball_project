@@ -19,9 +19,22 @@ YOLOv8 기반 야구 스윙 자동 판정 시스템
 - Roboflow (데이터 라벨링)
 - AWS EC2 (학습 환경)
 
-## 성능
-- 객체 검출: mAP@0.5 = 0.9514 (YOLOv8s)
-- 스윙 판정: Accuracy = 90%, F1 Score = 90.91%
+## 프로젝트 구조
+```
+baseball-swing-detection/
+├── scripts/              # 실행 스크립트
+│   ├── extract_frames.py
+│   ├── train_comparison.py
+│   ├── train_sizes.py
+│   ├── swing_detection.py
+│   └── evaluate_system.py
+├── best.pt               # 학습된 모델
+├── results/              # 실험 결과
+│   ├── comparison_results.csv
+│   ├── evaluation_results.csv
+│   └── size_comparison_results.csv
+└── README.md
+```
 
 ## 사용 방법
 
@@ -40,7 +53,7 @@ python scripts/train_sizes.py
 
 ### 2. 스윙 판정 실행
 python scripts/swing_detection.py
-기본적으로 `test_video.mp4`를 분석하여 `output_swing.mp4`를 생성합니다.
+기본적으로 `test.mp4`를 분석하여 `output_swing.mp4`를 생성합니다.
 
 ### 3. 시스템 평가
 여러 영상으로 시스템 성능 평가 방법
@@ -54,23 +67,6 @@ test_videos/
 
 #### 평가 실행
 python scripts/evaluate_system.py
-
-
-## 프로젝트 구조
-```
-baseball-swing-detection/
-├── scripts/              # 실행 스크립트
-│   ├── extract_frames.py
-│   ├── train_comparison.py
-│   ├── train_sizes.py
-│   ├── swing_detection.py
-│   └── evaluate_system.py
-├── best.pt               # 학습된 모델
-├── results/              # 실험 결과
-│   ├── comparison_results.csv
-│   └── size_comparison_results.csv
-└── README.md
-```
 
 ## 실험 결과
 
