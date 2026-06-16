@@ -6,7 +6,7 @@ YOLOv8 기반 야구 스윙 자동 판정 시스템
 
 ## 주요 기능
 - YOLOv8 기반 객체 검출 (Batter, Bat)
-- 시계열 배트 위치 추적
+- 배트 위치 추적
 - 이동량 기반 스윙 판정
 - 다양한 증강 조건 비교 실험
 - 모델 크기별 성능 비교
@@ -29,40 +29,35 @@ YOLOv8 기반 야구 스윙 자동 판정 시스템
 이미 학습된 모델(`models/best.pt`)을 제공
 직접 학습하는 방법
 
-\`\`\`bash
-# 데이터셋 다운로드 (Roboflow API 키 필요)
+#### 데이터셋 다운로드 (Roboflow API 키 필요)
 python scripts/download_datasets.py
 
-# 증강 효과 비교 실험
+#### 증강 효과 비교 실험
 python scripts/train_comparison.py
 
-# 모델 크기 비교 실험
+#### 모델 크기 비교 실험
 python scripts/train_sizes.py
-\`\`\`
 
 ### 2. 스윙 판정 실행
-\`\`\`bash
 python scripts/swing_detection.py
-\`\`\`
-
 기본적으로 `test_video.mp4`를 분석하여 `output_swing.mp4`를 생성합니다.
 
 ### 3. 시스템 평가
 여러 영상으로 시스템 성능 평가 방법
 
-\`\`\`bash
-# 테스트 영상 폴더 구조
+#### 테스트 영상 폴더 구조
+```
 test_videos/
 ├── swing/        # 스윙 영상
 └── no_swing/     # 비스윙 영상
+```
 
-# 평가 실행
+#### 평가 실행
 python scripts/evaluate_system.py
-\`\`\`
 
 
-## Project Structure
-\`\`\`
+## 프로젝트 구조
+```
 baseball-swing-detection/
 ├── scripts/              # 실행 스크립트
 │   ├── extract_frames.py
@@ -75,7 +70,7 @@ baseball-swing-detection/
 │   ├── comparison_results.csv
 │   └── size_comparison_results.csv
 └── README.md
-\`\`\`
+```
 
 ## 실험 결과
 
